@@ -4,6 +4,10 @@ const app=express();
 
 const notfoundhandler=require('./handlers/404');
 const servererror=require('./handlers/500')
+const logger=require('./middleware/logger');
+const validator=require('./middleware/validtor');
+
+app.use(logger);
 
 function start(port){
     app.listen(port , ()=>console.log(`Running on PORT ${port}`))
@@ -26,6 +30,12 @@ app.get('/data' , (req , res)=>{
     })
 })
 
+app.get('/person', validator , (req , res)=>{
+    const output={
+       name:req.query.name
+    };
+    res.json(output);
+})
 app.use('*' , notfoundhandler)
 app.use(servererror)
 module.exports={
