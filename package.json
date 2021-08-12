@@ -5,19 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage --verbose",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hasan-droid/server-deployment-practice.git"
+    "url": "git+https://github.com/Hasan-droid/basic-express-server.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Hasan-droid/server-deployment-practice/issues"
+    "url": "https://github.com/Hasan-droid/basic-express-server.git/issues"
   },
-  "homepage": "https://github.com/Hasan-droid/server-deployment-practice#readme",
+  "homepage": "https://github.com/Hasan-droid/basic-express-server.git#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1"
